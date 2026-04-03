@@ -17,7 +17,6 @@ ul {
 a {
   display: inline-block;
   text-decoration: none;
-  font-size: 3.5em;
   color: black;
   text-align: center;
 }
@@ -32,33 +31,38 @@ a:hover{
   cursor: grab;
 }
 
-nav{
-  text-align: center;
-  line-height: 250%;
-}
-
-.NAV_TEXT{
+/*wrappers*/
+.MENU_WRAPPER {
   position: fixed;
-  bottom: 11%;
-  left: -6%;
-  width: 30%;
-  height: 30%;
+  top: 60%;
+  left: -20%;
+  width: 60vw;
   transform: rotate(-10deg);
-  z-index: 1;
 }
 
 .LETTER_MENU {
   background-image: url("images/OPEN_LETTER.png");
   position: fixed;
-  bottom: 20%;
-  left: -20%;
-  width: 60%;
-  height: 60%;
-  transform: rotate(-10deg);
+  top: 30%;
+  left: 25%;
+  width: 50%;
+  aspect-ratio: 1 / 1;
+  transform: rotate(-5deg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  z-index: 1;
+}
+
+.NAV_TEXT{
+  position: absolute;
+  left: 8%;
+  padding-top: 3%;
+  width: 80%;
+  font-size: 3vw;
+  line-height: 1;
+  text-align: center;
+  align-items: center;
+  transform: rotate(-5deg);
 }
 
 .FOLDER_BG{
@@ -103,17 +107,20 @@ nav{
 
 
 /* Home */
+
 .letter {
   background-image: url("images/LETTER_BACK.png");
   position: fixed;
-  top: 57.5%;
-  left: 50%;
+  top: 30.5%;
+  left: 30%;
   transform: translate(-50%, -50%);
   width: 43.5%;
   height: 43.5%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  transform: rotate(15deg);
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .letter:hover {
@@ -189,77 +196,65 @@ nav{
 
 /* About */
 .container {
-  width: 100%;
-  height: 100%;
-  
-}
-
-
-.me{
-  background-image: url("images/ME.png") ;
-  top: -1%;  
-  right: 5%;
-  position: absolute;
-  width: 90%;
-  height: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 1;
+  width: 100vh;
+  height: 100vh;
 }
 
 
 section.ME{
+  background-image: url("images/ME.png") ;
   background-color: #f3eee9;
   position: absolute;
   top: 15%;  
   right: 3%;
-  border-radius: 0.25em;
+  transform: rotate(3deg);
   display: inline-block;
   padding: 5%;
   padding-top: 1%;
   font-size: 40px;
   line-height: 40px;
-  width: 55%;
-  height: 60%;
   margin: 1%;
-
+  width: 55%;
+  height: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .selfie{
   background-image: url("images/selfie.png") ;
-  top: 105%;  
-  right: 70%;
-  position: absolute;
-  width: 50%;
-  height: 50%;
+  top: 100%;  
+  right: 46%;
+  position: absolute; 
+  transform: rotate(-3deg);
+  width: 35%;
+  height: 35%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   z-index: 1;
 }
 
+
 section.ABOUT{
-  background-color: #f3eee9;
+  background-image: url("images/ABOUT.png");
   position: absolute;
-  top: 20%;  
+  top: 100%;  
   right: 3%;
   border-radius: 0.25em;
   display: inline-block;
-  padding-top: 60%;
+  transform: rotate(-3deg);
   padding: 5%;
+  padding-top: 1%;
   font-size: 40px;
   line-height: 40px;
   margin: 1%;
-  margin-top: 40%;
   width: 55%;
-  height: 60%
+  height: 61%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-
-.p{
-  color: black;
-}
-
 
 
 
@@ -330,8 +325,6 @@ form {
 
 
 
-
-
 /* Socials */
 
 .SOCIALS {
@@ -356,7 +349,6 @@ form {
   width: 50px;
   height: 50px;
   background-color: #ffffff;
-  font-size: 35px;
   align-items: center;
   justify-content: center;
   font-size: 25px;
@@ -377,7 +369,6 @@ form {
   position: relative;
   color: #262626;
   transition: .5s;
-  z-index: 3;
 }
 
 .social-nav li a:hover .icon {
@@ -395,7 +386,6 @@ form {
   height: 100%;
   background: #d65442;
   transition: .5s;
-  z-index: 2;
 }
 
 .social-nav li a:hover::before {
@@ -562,7 +552,6 @@ body.PORTFOLIO{
   height: 3300px;
 }
 
-
 body.ABOUT{
   height: 1800px;
 }
@@ -578,8 +567,8 @@ html {
 
 /* HOME 4 PHONE*/
 .letter {
-  top: 57.5%;
-  left: 50%;
+  top: 20.5%;
+  left: 30%;
   width: 60%;
   height: 60%;
 }
@@ -619,59 +608,39 @@ html {
   height: 120%;
 }
 
-
-/* NAV 4 PHONE */
-a {
-  font-size: 3em;
+.MENU_WRAPPER {
+  position: fixed;
+  top: 60%;
+  left: -10%;
+  width: 60vw;
+  transform: rotate(-10deg);
+  z-index: 9999;
 }
+
 
 .NAV_TEXT{
-  bottom: -4.5%;
-  left: -3%;
-  width: 40%;
-  height: 30%;
+  left: 5%;
 }
 
-.LETTER_MENU {
-  position: fixed;
-  bottom: -20%;
-  left: -9%;
-  width: 60%;
-  height: 60%;
+section.ME{
+  width: 55%;
+  height: 20%;
 }
 
-.FOLDER_BG{
-  top: -20%;
-  left: -80%;
-  width: 120%;
-  height: 120%;
+.selfie{
+  top: 44%;  
+  right: 55%;
+  width: 20%;
+  height: 20%;
 }
 
-.FILM_BG{
-  top: 80%;
-  left: 60%;
-  transform: rotate(20deg);
-  width: 30%;
-  height: 30%;
-}
-
-.SD_BG{
-  top: 1%;
-  left: 90%;
-  width: 12%;
-  height: 12%;
-
-}
 
 section.ABOUT{
-  background-color: #f3eee9;
-  position: absolute;
-  top: 15%;  
+  top: 30%;  
   right: 3%;
-  width: 60vh;
-  height: 1000px;
+  margin: 1%;
+  width: 55%;
+  height: 61%;
 }
-
-
 
 }
