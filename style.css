@@ -599,6 +599,8 @@ html {
   width: 100%;
 }
 
+
+
 /* HOME 4 PHONE*/
 .letter {
   top: 20.5%;
@@ -644,6 +646,8 @@ html {
   overflow-x: hidden;
 }
 
+/*NAV*/
+
 .MENU_WRAPPER {
   position: fixed;
   top: 80%;
@@ -659,6 +663,8 @@ width: 75%;
 font-size: 5vw;
 line-height: .85;
 }
+
+/*ABOUT ME*/
 
 section.ME{
   width: 55%;
@@ -697,6 +703,30 @@ left: -1%;
 .SD_BG{
   top: 30%;
 }
+}
 
 
+
+@media (max-width: 375px) {
+section.ME{
+  width: 64%;
+}
+
+
+section.ABOUT{
+  top: 30%;  
+}
+
+section.EXP{
+  top: 70%;  
+}
+
+section.APPS{
+  top: 105%;  
+}
+
+.NAV_TEXT{
+width: 75%;
+left: 5%;
+}
 }
