@@ -549,9 +549,7 @@ mark.PORT{
 body.HOME{
   height: 2300px;
 }
-body.WRAPPER{
-  width: 100%;
-}
+
 body.PORTFOLIO{
   height: 3300px;
 }
@@ -586,6 +584,7 @@ html {
   left: 50%;
   width: 60%;
   height: 60%;
+
 }
 
 .SD{
