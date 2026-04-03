@@ -277,19 +277,6 @@ section.EXP{
   background-position: center;
 }
 
-section.APPS{
-  background-image: url("images/APPS.png");
-  position: absolute;
-  top: 260%;  
-  right: 5%;
-  display: inline-block;
-  width: 40%;
-  height: 50%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 /* Contact Info */
 .contact-form{
   width: 600px;
@@ -590,7 +577,7 @@ section.ABOUT{
 
 
 /* MEDIA STUFFS */
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width:1024px) {
 
 html {
   overflow-x: hidden;
@@ -687,13 +674,6 @@ section.EXP{
   height: 70%;
 }
 
-section.APPS{
-  top: 133%;  
-  right: 5%;
-  width: 60%;
-  height: 50%;
-}
-
 .FILM_BG{
 width: 30%;
 top: 50%;
@@ -705,28 +685,19 @@ left: -1%;
 }
 }
 
-
-
-@media (max-width: 375px) {
+@media (min-width: 360px) and (max-width: 414px) {
 section.ME{
-  width: 64%;
+  width: 80%;
 }
-
-
 section.ABOUT{
-  top: 30%;  
+  top: 24%;  
 }
-
 section.EXP{
-  top: 70%;  
+  top: 55%;  
 }
-
-section.APPS{
-  top: 105%;  
-}
-
 .NAV_TEXT{
 width: 75%;
-left: 5%;
+left: 6%;
 }
 }
+
