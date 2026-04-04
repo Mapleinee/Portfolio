@@ -2,13 +2,8 @@
 body{
   background-color:#833737 ;
   font-family: "ByteBounce"; 
-}
-
-//stop horizontal overflow
-
-body {
- overflow-x:hidden;
- overflow-y:visible;
+  overflow-x:hidden;
+  overflow-y:visible;
 }
 
 @media screen and (max-width:640px) {
@@ -591,7 +586,7 @@ body.ABOUT{
 @media (max-width: 768px) {
 
   html {
-    overflow: hidden;
+    overflow: hidden !important;
   }
   
 .ABOUT{
