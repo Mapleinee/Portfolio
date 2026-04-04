@@ -2,17 +2,9 @@
 body{
   background-color:#833737 ;
   font-family: "ByteBounce"; 
-  overflow-x:hidden;
-  overflow-y:visible;
-}
-
-@media screen and (max-width:640px) {
- .Site {
-  overflow-x:hidden;
-  overflow-y:visible;
  }
 
-}
+
 @font-face {
   font-family: ByteBounce;
   src: url(fonts/ByteBounce.ttf);
@@ -144,6 +136,8 @@ a:hover{
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  transform-style: preserve-3d: Allows the cards to maintain their 3D position during rotation
+transform: rotateY(180deg):
 }
 
 .SD{
@@ -569,10 +563,6 @@ mark.PORT{
 
 
 /* Page Sizes */
-body.HOME{
-  height: 2300px;
-}
-
 body.PORTFOLIO{
   height: 3300px;
 }
@@ -585,17 +575,19 @@ body.ABOUT{
 /*PHONE MEDIA STUFFS*/
 @media (max-width: 768px) {
 
-  html {
-    overflow: hidden !important;
-  }
+html , body{
+    overflow-x: hidden !important;
+}
   
+
+
 .ABOUT{
   display: inline-block;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 80vh;
-  padding: 0px;
+  height: 100vh;
+  padding: 50px;
 }
 
 .ME, .ABOUTME{
@@ -616,7 +608,7 @@ body.ABOUT{
   background-image: url("images/ABOUT.png");
   transform: rotate(5deg);
   width: 90%;
-  height: 550px;
+  height: 580px;
   margin-left: 10%;
 }
 
