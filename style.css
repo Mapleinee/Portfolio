@@ -589,12 +589,17 @@ body.ABOUT{
 
 /*PHONE MEDIA STUFFS*/
 @media (max-width: 768px) {
+
+  html {
+    overflow: hidden;
+  }
+  
 .ABOUT{
   display: inline-block;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 80vh;
   padding: 0px;
 }
 
