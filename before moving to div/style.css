@@ -1,0 +1,703 @@
+/* General Styling */
+body{
+  background-color:#833737 ;
+  font-family: "ByteBounce";
+}
+
+@font-face {
+  font-family: ByteBounce;
+  src: url(fonts/ByteBounce.ttf);
+}
+
+/* NAVIGATION */
+ul {
+  list-style-type: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
+a.PAGE{
+color: #d65442;
+}
+
+
+a:hover{
+  color: #d65442;
+  cursor: grab;
+}
+
+/*wrappers*/
+
+.MENU_WRAPPER {
+  position: fixed;
+  top: 60%;
+  left: -20%;
+  width: 60vw;
+  transform: rotate(-10deg);
+  z-index: 9999;
+}
+
+.LETTER_MENU {
+  background-image: url("images/OPEN_LETTER.png");
+  position: fixed;
+  top: 30%;
+  left: 25%;
+  width: 50%;
+  aspect-ratio: 1 / 1;
+  transform: rotate(-5deg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.NAV_TEXT{
+  position: absolute;
+  left: 8%;
+  padding-top: 3%;
+  width: 80%;
+  font-size: 3vw;
+  line-height: 1;
+  text-align: center;
+  align-items: center;
+  transform: rotate(-5deg);
+}
+
+.FOLDER_BG{
+  background-image: url("images/FOLDER.png");
+  position: fixed;
+  top: -40%;
+  left: -65%;
+  transform: rotate(-70deg);
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.FILM_BG{
+  background-image: url("images/FILM.png");
+  position: fixed;
+  top: 34%;
+  left: 3%;
+  transform: rotate(10deg);
+  width: 20%;
+  height: 20%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.SD_BG{
+  background-image: url("images/SD.png");
+  position: fixed;
+  top: 15%;
+  left: 10%;
+  transform: rotate(60deg);
+  width: 12%;
+  height: 12%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+/* Home */
+
+.letter {
+  background-image: url("images/LETTER_BACK.png");
+  position: fixed;
+  top: 30.5%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 43.5%;
+  height: 43.5%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(15deg);
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.letter:hover {
+  background-image: url("images/LETTER_FRONT.png");
+  position: fixed;
+  top: 54.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.SD{
+  background-image: url("images/SD.png");
+  position: fixed;
+  top: 15%;
+  left: 73%;
+  transform: rotate(-50deg);
+  width: 12%;
+  height: 12%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.FILM{
+  background-image: url("images/FILM.png");
+  position: fixed;
+  top: 60%;
+  right: 80%;
+  transform: rotate(-30deg);
+  width: 20%;
+  height: 20%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+.TAPE{
+  background-image: url("images/TAPE.png");
+  position: fixed;
+  top: 75%;
+  left: 80%;
+  transform: rotate(10deg);
+  width: 30%;
+  height: 30%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.FOLDER{
+  background-image: url("images/FOLDERSHORT.png");
+  position: fixed;
+  align-items: center;
+  bottom: 40%;
+  left: -10%;
+  transform: rotate(-7deg);
+  width: 120%;
+  height: 120%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+
+
+/* About */
+.container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+section.ME{
+  background-image: url("images/ME.png") ;
+  background-color: #f3eee9;
+  position: absolute;
+  top: 10%;  
+  right: 3%;
+  transform: rotate(3deg);
+  display: inline-block;
+  padding: 5%;
+  padding-top: 1%;
+  font-size: 40px;
+  line-height: 40px;
+  margin: 1%;
+  width: 55%;
+  height: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.selfie{
+  background-image: url("images/selfie.png") ;
+  top: 85%;  
+  right: 40%;
+  position: absolute; 
+  transform: rotate(-3deg);
+  width: 38%;
+  height: 38%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+
+
+section.ABOUT{
+  background-image: url("images/ABOUT.png");
+  position: absolute;
+  top: 85%;  
+  right: 1%;
+  border-radius: 0.25em;
+  display: inline-block;
+  transform: rotate(-3deg);
+  padding: 5%;
+  padding-top: 1%;
+  font-size: 40px;
+  line-height: 40px;
+  margin: 1%;
+  width: 55%;
+  height: 61%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+section.EXP{
+  background-image: url("images/EXPERIENCE.png");
+  position: absolute;
+  top: 180%;  
+  right: -8%;
+  border-radius: 0.25em;
+  display: inline-block;
+  transform: rotate(-3deg);
+  padding: 10%;
+  width: 65%;
+  height: 65%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Contact Info */
+.contact-form{
+  width: 600px;
+  border-radius: 10px;
+
+}
+
+.btn {
+  padding: 10px 40px;
+  border-radius: 6px;
+  font-family: "ByteBounce";
+  font-size: 30px;
+}
+
+.btn:hover {
+  background-color:  #f8ce65;
+  color: #d82a2d;
+}
+
+textarea, input {
+  padding: 10px 10px;
+  border-radius: 6px;
+  outline: none;
+  width: 500px;
+  text-align: left;
+  border: #1d1817;
+  border-style:ridge;
+  font-family:monospace;
+  font-size: 20px;
+}
+
+input {
+  height: 25px;
+}
+
+input:hover , textarea:hover{
+border: #d65442;
+border-style: solid;
+color: #d65442;
+}
+
+textarea {
+  height: 240px;
+}
+
+form {
+  font-size: 40px;
+  line-height: 33px;
+}
+
+.CONTACT {
+  background-color: #f3eee9;
+  position: fixed;
+  top: 4%;  
+  right: 5%;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 80px;
+  font-size: 40px;
+  line-height: 40px;
+  overflow-x: hidden;
+  margin: 20px;
+  width: 80%;
+}
+
+
+
+/* Socials */
+
+.SOCIALS {
+  position: fixed;
+  top: 15%;
+  left: 82%;
+}
+
+.social-nav {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social-nav li.nav {
+  list-style: none;
+}
+
+.social-nav li a {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin: 0 10px;
+  display: flex;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+}
+
+
+
+
+/* Icon */
+.social-nav li a .icon {
+  position: relative;
+  color: #262626;
+  transition: .5s;
+}
+
+.social-nav li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+
+.social-nav li a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #d65442;
+  transition: .5s;
+}
+
+.social-nav li a:hover::before {
+  top: 0;
+}
+
+ul li:nth-child(1) a:before{
+  background: #f8ce65;
+}
+
+ul li:nth-child(2) a:before{
+  background: #d65442;
+}
+
+ul li:nth-child(3) a:before {
+  background: #833737;
+}
+
+ul li:nth-child(4) a:before {
+  background:  #262626;
+}
+
+
+
+
+
+
+
+/* Portfolio */
+
+.TITLE{
+  position: absolute;
+  font-size: 120px;
+  top: 4%;
+  left: 63%;
+  transform: translateX(-50%);
+  color: #f8ce65;
+}
+
+section.PORTFOLIO{
+  background-color: #f3eee9;
+  position: absolute;
+  top: 15%;  
+  right: 3%;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 80px;
+  font-size: 40px;
+  line-height: 40px;
+  margin: 20px;
+  width: 1090px;
+  height: 2900px;
+}
+
+.SOD{
+  position: absolute;
+  top: 15%;
+  left: 5%;
+}
+
+.SOD_ART{
+  background-image: url("images/SOD_ART.png");
+  position: absolute;
+  width: 477.5px;
+  height: 526.75px; 
+  background-size: cover;
+  top: 2%;
+  left: 55%;
+}
+
+mark.PORT{
+ font-size: 70px;
+ background-color: #f3eee9;
+}
+
+
+
+
+
+/* Maharlika */
+
+.MAHARLIKA{
+  position: absolute;
+  top: 20%;
+  left: 6.5%;
+}
+
+.MAHARLIKA_IMG{
+  background-image: url("images/MAHARLIKA.png");
+  position: absolute;
+  width: 1025.6px;
+  height: 698px;
+  background-size: cover;
+  top: 23%;
+  left: 9%;
+}
+
+.MAHA{
+  position: absolute;
+  top: 35.25%;
+  left: 34.5%;
+}
+
+.MAHAR{
+  position: absolute;
+  top: 46%;
+  left: 39%;
+}
+
+
+
+
+
+/* Taskly */
+
+.TASKLY{
+  position: absolute;
+  top: 50%;
+  left: 6.5%;
+}
+
+.TASKLY_IMG{
+  background-image: url("images/TASKLY.png");
+  position: absolute;
+  width: 1144px;
+  height: 639px;
+  background-size: cover;
+  top: 52%;
+  left: 5%;
+}
+
+
+
+
+
+/* Record Store */
+
+.RECORD{
+  position: absolute;
+  top: 75%;
+  left: 6.5%;
+}
+
+.RECORD_IMG{
+  background-image: url("images/RECORD.png");
+  position: absolute;
+  width: 1144px;
+  height: 639px;
+  background-size: cover;
+  top: 77%;
+  left: 5%;
+}
+
+
+
+
+
+/* Page Sizes */
+body.HOME{
+  height: 2300px;
+}
+
+body.PORTFOLIO{
+  height: 3300px;
+}
+
+section.ABOUT{
+  height: 700px;
+}
+
+
+
+/* MEDIA STUFFS */
+@media (min-width: 768px) and (max-width:1024px) {
+
+html {
+  overflow-x: hidden;
+}
+.container {
+  width: 100%;
+}
+
+
+
+/* HOME 4 PHONE*/
+.letter {
+  top: 20.5%;
+  left: 20%;
+  width: 60%;
+  height: 60%;
+}
+
+.letter:hover {
+  top: 54.5%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+
+}
+
+.SD{
+  top: 15%;
+  left: 73%;
+  width: 10%;
+  height: 10%;
+}
+
+.FILM{
+  top: 60%;
+  right: 80%;
+  width: 30%;
+  height: 30%;
+}
+
+.TAPE{
+  top: 75%;
+  left: 80%;
+  width: 30%;
+  height: 30%;
+}
+
+.FOLDER{
+  bottom: 40%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  overflow-x: hidden;
+}
+
+/*NAV*/
+
+.MENU_WRAPPER {
+  position: fixed;
+  top: 80%;
+  left: -25%;
+  width: 90vw;
+  transform: rotate(-10deg);
+  z-index: 9999;
+}
+
+
+.NAV_TEXT{
+width: 75%;
+font-size: 5vw;
+line-height: .85;
+}
+
+/*ABOUT ME*/
+
+section.ME{
+  width: 55%;
+  height: 20%;
+}
+
+
+section.ABOUT{
+  top: 40%;  
+  right: 3%;
+  margin: 1%;
+  width: 55%;
+  height: 61%;
+}
+
+section.EXP{
+  top: 93%;  
+  right: -2%;
+  width: 70%;
+  height: 70%;
+}
+
+.FILM_BG{
+width: 30%;
+top: 50%;
+left: -1%;
+}
+
+.SD_BG{
+  top: 30%;
+}
+}
+
+@media (min-width: 360px) and (max-width: 414px) {
+section.ME{
+  width: 80%;
+}
+section.ABOUT{
+  top: 24%;  
+}
+section.EXP{
+  top: 55%;  
+}
+.NAV_TEXT{
+width: 75%;
+left: 6%;
+}
+}
+
