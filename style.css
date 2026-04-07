@@ -32,7 +32,7 @@ a:hover{
   cursor: grab;
 }
 
-/*NAVIGATION BG STUFF*/
+/*NAVIGATION N BG STUFF*/
 
 .MENU_WRAPPER {
   position: fixed;
@@ -43,6 +43,12 @@ a:hover{
   z-index: 9999;
 }
 
+.LETTER_MENU, .SD_BG, .FILM_BG, .FOLDER_BG{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .LETTER_MENU {
   background-image: url("images/OPEN_LETTER.png");
   position: fixed;
@@ -50,9 +56,6 @@ a:hover{
   width: 50%;
   aspect-ratio: 1 / 1;
   transform: rotate(-5deg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .NAV_TEXT{
@@ -75,9 +78,6 @@ a:hover{
   transform: rotate(-70deg);
   width: 100%;
   height: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .FILM_BG{
@@ -88,9 +88,6 @@ a:hover{
   transform: rotate(10deg);
   width: 20%;
   height: 20%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .SD_BG{
@@ -101,44 +98,60 @@ a:hover{
   transform: rotate(60deg);
   width: 12%;
   height: 12%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
-
-
-/* Home */
-.letter {
-  background-image: url("images/LETTER_BACK.png");
-  position: fixed;
-  top: 60.5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 43.5%;
-  height: 43.5%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: transform 1500ms;
-  transform-style: preserve-3d;
-  transition: all 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+/*letter flipping*/
+.flippy{
+  width: 65vh;
+  height: 80%;
+  top: 20%;
+  left: 35%;
+  position: absolute;
+  filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.4));
 }
 
-.letter:hover {
-  background-image: url("images/LETTER_FRONT.png");
-  position: fixed;
-  top: 38.5%;
-  left: 28%;
-  transform: translate(-50%, -50%);
-  width: 45.5%;
-  height: 45.5%;
+.flip-target{
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center; 
-  transform: rotateY(180deg);
-
 }
+
+.card {
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+.flippy:hover .card {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.front{
+   background-image: url("images/LETTER_FRONT.png");
+
+  }
+
+.back {
+  background-image: url("images/LETTER_BACK.png");
+  transform: rotateY(180deg);
+}
+
+/*BG STUFF*/
 
 .SD{
   background-image: url("images/SD.png");
@@ -196,39 +209,32 @@ a:hover{
 
 /* Footer*/
 footer{
-  background-image: url("images/PAPER/3.png"); 
-  width: 100%;
-  height: 30vh;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: #f3eee9; 
+  flex-direction: column;
+  align-items: right;
+  text-align: right;
   display: flex;
+  padding: 50px;
+  line-height: 20px;
 }
 
 .footer {
-  font-size: 4em;
-  align-items: center;
-  text-align: left;
-  padding-top: 4%;
-  padding-left: 31%;
-  width: 30%;
+  font-size: 20px;
 }
 
 .footerr{
-  font-size: 3em;
-  align-items: center;
-  padding-top: 4%;
-  padding-right: 25%;
-  text-align: right;
-
+  font-size: 20px;
+  color: #d82a2d;
 }
 
 img{
-  height: 60px;
+  height: 30px;
+  width: 20px;
 }
 
 img.phone{
-  height: 50px;
+  height: 25px;
+  width: 15px;
 }
 
 /* About */
@@ -279,8 +285,12 @@ img.phone{
 
 /* Contact Info */
 .contact-form{
-  width: 600px;
+  width: 100%;
   border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  line-height: 20px;
 }
 
 .btn {
@@ -299,16 +309,11 @@ textarea, input {
   padding: 10px 10px;
   border-radius: 6px;
   outline: none;
-  width: 500px;
+  width: 600px;
   text-align: left;
   border: #1d1817;
   border-style:ridge;
   font-family:monospace;
-  font-size: 20px;
-}
-
-input {
-  height: 25px;
 }
 
 input:hover , textarea:hover{
@@ -318,26 +323,40 @@ color: #d65442;
 }
 
 textarea {
-  height: 240px;
+  height: 600px;
 }
 
-form {
-  font-size: 40px;
-  line-height: 33px;
+
+input, textarea {
+  font-size: 15px;
 }
 
 .CONTACTPAGE{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 800px;
-  padding: 100px;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px;
   padding-top: 150px;
   padding-left: 25%;
 }
 
 .CONTACTINFO{
   padding-top: 40%;
+}
+
+.CONTACT {
+  background-color: #f3eee9;
+  display: inline-block;
+  position: relative;
+  border-radius: 10px;
+  display: flex;
+  padding: 80px;
+  overflow-x: hidden;
+  margin: 5%;
+  width: 800px;
+  justify-content: center;
 }
 
 .APPS, .CONTACTME{
@@ -350,32 +369,20 @@ form {
 
   .CONTACTME{
   background-image: url("images/CONTACTME.png") ;
-  transform: rotate(-5deg);
-  width: 60%;
+  width: 30%;
   height: 600px;
+  position: relative;
+
 }
 
 .APPS{
   background-image: url("images/APPS.png");
-  transform: rotate(5deg);
   width: 40%;
   height: 600px;
-}
-
-
-.CONTACT {
-  background-color: #f3eee9;
-  display: inline-block;
   position: relative;
-  border-radius: 0.25em;
-  display: flex;
-  padding: 80px;
-  font-size: 40px;
-  line-height: 40px;
-  overflow-x: hidden;
-  margin: 5%;
-  margin-left: 10%;
-  width: 80vh;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
@@ -478,6 +485,7 @@ ul li:nth-child(4) a:before {
   transform: translateX(-50%);
   color: #f8ce65;
 }
+
 
 section.PORTFOLIO{
   background-color: #f3eee9;
@@ -688,6 +696,28 @@ html , body{
   left: 55%;
 }
 
+.footer {
+  font-size: 20px;
+  align-items: center;
+  text-align: left;
+  padding-top: 4%;
+  padding-left: 31%;
+  width: 10%;
+}
 
+.footerr{
+  font-size: 10px;
+  align-items: center;
+  padding-top: 4%;
+  padding-right: 25%;
+  text-align: right;
+}
 
+img{
+  height: 12px;
+}
+
+img.phone{
+  height: 10px;
+}
 }
