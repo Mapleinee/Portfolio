@@ -40,7 +40,6 @@ a:hover{
   top: 60%;
   width: 60vw;
   transform: rotate(-10deg);
-  z-index: 9999;
 }
 
 .LETTER_MENU, .SD_BG, .FILM_BG, .FOLDER_BG{
@@ -142,12 +141,12 @@ a:hover{
 }
 
 .front{
-   background-image: url("images/LETTER_FRONT.png");
+   background-image: url("images/LETTER_BACK.png");
 
   }
 
 .back {
-  background-image: url("images/LETTER_BACK.png");
+  background-image: url("images/LETTER_FRONT.png");
   transform: rotateY(180deg);
 }
 
@@ -177,7 +176,6 @@ a:hover{
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  z-index: 1;
 }
 
 .TAPE{
@@ -214,8 +212,9 @@ footer{
   align-items: right;
   text-align: right;
   display: flex;
-  padding: 50px;
+  padding: 20px;
   line-height: 20px;
+  z-index: 2;
 }
 
 .footer {
@@ -235,6 +234,12 @@ img{
 img.phone{
   height: 25px;
   width: 15px;
+}
+
+img:hover{
+  transform: scale(1.25);
+  transition: all 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
 }
 
 /* About */
@@ -270,18 +275,32 @@ img.phone{
 .ABOUTME{
   background-image: url("images/ABOUT.png");
   transform: rotate(5deg);
-  width: 40%;
-  height: 80vh;
+  width: 60vh;
+  height: 100%;
+}
+
+p.ABOUTTEXT{
+  padding: 20%;
+  padding-top: 20% ;
+  transform: rotate(2deg);
+  font-size: 1rem;
+  font-family:  monospace;
 }
 
 .EXP{
   background-color: #f3eee9;
-  width: 80vh;
-  height: 60vh;
-  border-radius: 1em;
-  padding: 10%;
+  width: 100vh;
+  height: 100%;
+  border-radius: 5px;
+  padding: 5%;
+  z-index: 1;
 }
 
+p.EXPTEXT{
+  padding: 5%;
+  font-size: 18px;
+  font-family:  monospace;
+}
 
 /* Contact Info */
 .contact-form{
@@ -369,22 +388,29 @@ input, textarea {
 
   .CONTACTME{
   background-image: url("images/CONTACTME.png") ;
-  width: 30%;
+  width: 50%;
   height: 600px;
   position: relative;
-
+  transform: rotate(-5deg);
 }
 
 .APPS{
   background-image: url("images/APPS.png");
-  width: 40%;
+  width: 45%;
   height: 600px;
   position: relative;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: rotate(5deg);
 }
 
+.PICS{
+  width: 100%;
+  display: flex;
+}
+
+.hover:hover {
+  transform: scale(1.05);
+  transition: all 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
 
 
 /* Socials */
@@ -560,17 +586,16 @@ mark.PORT{
 
 
 
+/* Record Store */
 
-/* Taskly */
-
-.TASKLY{
+.RECORD{
   position: absolute;
   top: 50%;
   left: 6.5%;
 }
 
-.TASKLY_IMG{
-  background-image: url("images/TASKLY.png");
+.RECORD_IMG{
+  background-image: url("images/RECORD.png");
   position: absolute;
   width: 1144px;
   height: 639px;
@@ -583,39 +608,24 @@ mark.PORT{
 
 
 
-/* Record Store */
-
-.RECORD{
-  position: absolute;
-  top: 75%;
-  left: 6.5%;
-}
-
-.RECORD_IMG{
-  background-image: url("images/RECORD.png");
-  position: absolute;
-  width: 1144px;
-  height: 639px;
-  background-size: cover;
-  top: 77%;
-  left: 5%;
-}
-
-
-
-
-
 /* Page Sizes */
 body.PORTFOLIO{
   height: 3300px;
 }
 
-body.ABOUT{
-  width: 100%;
-}
 
 
-/*PHONE MEDIA STUFFS*/
+
+
+
+
+
+
+
+
+
+
+/*TABLET MEDIA STUFFS*/
 @media (max-width: 768px) {
 
 html , body{
@@ -629,7 +639,7 @@ html , body{
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   padding: 50px;
 }
 
@@ -640,27 +650,31 @@ html , body{
   background-position: center;
 }
 
-  .ME{
-  background-image: url("images/ME.png") ;
-  transform: rotate(-5deg);
+.ME{
   width: 90%;
   height: 300px;
 }
 
 .ABOUTME{
-  background-image: url("images/ABOUT.png");
-  transform: rotate(5deg);
-  width: 90%;
-  height: 580px;
-  margin-left: 10%;
+  width: 80%;
+  height: 700px;
+  margin-left: 15%;
 }
 
+p.ABOUTTEXT{
+  padding: 20%;
+  padding-top: 16% ;
+  transform: rotate(2deg);
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+}
 
 /*PHONE NAVIGATION*/
 .NAV_TEXT{
   left: 7%;
   padding-top: 3%;
   font-size: 5vw;
+  z-index: 99;
 }
 
 .MENU_WRAPPER {
@@ -682,42 +696,284 @@ html , body{
   width: 8%;
 }
 
-.letter {
-  width: 60.5%;
-  height: 60.5%;
-  top: 55%;
-  left: 55%;
+/*letter*/
+.card {
+  transform-style: preserve-3d;
+  width: 80%;
+  height: 80%;
+  transition: transform 0.6s ease;
 }
 
-.letter:hover {
-  width: 60.5%;
-  height: 60.5%;
-  top: 55%;
-  left: 55%;
+.front,
+.back {
+  width: 100%;
+  height: 100%;
 }
 
-.footer {
-  font-size: 20px;
+.flippy{
+  top: 50%;
+  left: 60%;
+  width: 50vh;
+  height: 60%;
+  transform: translate(-50%, -50%);
+}
+
+/*CONTACT ME tablet*/
+.PICS{
+  flex-direction: column;
+}
+
+.CONTACTME{
+  width: 100%;
+  height: 500px;
+}
+
+.APPS{
+  width: 100%;
+  height: 400px;
+}
+
+textarea, input {
+  width: 400px;
+}
+
+textarea {
+  height: 300px;
+}
+
+.CONTACTPAGE{
+  display: flex;
+  justify-content: center;
   align-items: center;
-  text-align: left;
-  padding-top: 4%;
-  padding-left: 31%;
-  width: 10%;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px;
+  padding-top: 150px;
+  padding-left: 25%;
 }
 
-.footerr{
-  font-size: 10px;
-  align-items: center;
-  padding-top: 4%;
-  padding-right: 25%;
+.CONTACTINFO{
+  padding-top: 40%;
+}
+
+.CONTACT {
+  width: 400px;
+}
+
+/*EXP*/
+.EXP{
+  width: 50vh;
+  height: 120vh;
+  padding: 5%;
+  margin-top: 30%;
+  margin-left: 20%;
+}
+
+p.EXPTEXT{
+  padding: 5%;
+  font-size: 16px;
   text-align: right;
 }
 
-img{
-  height: 12px;
+footer{
+  margin-top: 30%;
+}
 }
 
-img.phone{
-  height: 10px;
+
+
+
+
+/*PHONE MEDIA STUFFS*/
+@media (max-width: 468px) {
+
+html , body{
+    overflow-x: hidden !important;
 }
+  
+.ABOUT{
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 80vh;
+  padding: 50px;
+}
+
+.ME, .ABOUTME{
+ display: flex;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ME{
+  width: 90%;
+  height: 200px;
+}
+
+.ABOUTME{
+  width: 90%;
+  height: 580px;
+  margin-left: 0%;
+}
+
+p.ABOUTTEXT{
+  padding: 15%;
+  padding-top: 27% ;
+  transform: rotate(2deg);
+  font-size: 13px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/*PHONE NAVIGATION*/
+.NAV_TEXT{
+  left: 7%;
+  padding-top: 3%;
+  font-size: 5vw;
+}
+
+.MENU_WRAPPER {
+  top: 85%;
+  left: -40%;
+  width: 100vw;
+}
+
+/*BG IMGS*/
+.FILM_BG{
+  top: 55%;
+  left: 3%;
+  width: 25%;
+}
+
+.SD_BG{
+  top: 35%;
+  left: 13%;
+  width: 8%;
+}
+
+/*letter*/
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+}
+
+.flippy{
+  top: 50%;
+  left: 50%;
+  width: 25vh;
+  height: 40%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+.SD{
+  top: 10%;
+  left: 60%;
+  transform: rotate(-50deg);
+  width: 12%;
+  height: 12%;
+}
+
+.FILM{
+  top: 60%;
+  right: 70%;
+  transform: rotate(-30deg);
+  width: 30%;
+  height: 30%;
+}
+
+.TAPE{
+  top: 70%;
+  left: 60%;
+  transform: rotate(10deg);
+  width: 40%;
+  height: 40%;
+}
+
+.FOLDER{
+  bottom: 40%;
+  left: -10%;
+  transform: rotate(-7deg);
+  width: 120%;
+  height: 120%;
+}
+
+/*CONTACT ME tablet*/
+.PICS{
+  flex-direction: column;
+}
+
+.CONTACTME{
+  width: 100%;
+  height: 300px;
+}
+
+.APPS{
+  width: 100%;
+  height: 200px;
+}
+
+textarea, input {
+  width: 300px;
+}
+
+textarea {
+  height: 200px;
+}
+
+.CONTACTPAGE{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px;
+  padding-top: 150px;
+  padding-left: 10%;
+}
+
+.CONTACTINFO{
+  padding-top: 40%;
+}
+
+.CONTACT {
+  width: 250px;
+}
+
+footer{
+  margin-top: 40%;
+}
+.footer {
+  font-size: 18px;
+}
+
+.footerr{
+  font-size: 18px;
+  color: #d82a2d;
+}
+
+/*EXP*/
+.EXP{
+  width: 40vh;
+  height: 120vh;
+  padding: 5%;
+  margin-left: 0%;
+  margin-bottom: 80vh;
+}
+
+p.EXPTEXT{
+  padding: 5%;
+  font-size: 16px;
+  text-align: right;
+}
+
 }
