@@ -240,7 +240,7 @@ img.phone{
   width: 15px;
 }
 
-img.logo:hover{
+img:hover{
   transform: scale(1.25);
   transition: all 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
@@ -360,8 +360,8 @@ input, textarea {
   align-items: center;
   flex-direction: column;
   height: 100%;
-  padding-top: 0;
   padding: 10px;
+  padding-top: 150px;
   padding-left: 25%;
 }
 
@@ -508,51 +508,44 @@ ul li:nth-child(4) a:before {
 /* Portfolio */
 
 .TITLE{
+  position: absolute;
   font-size: 120px;
-  text-align: center;
-  align-items: center;
+  top: 4%;
+  left: 63%;
+  transform: translateX(-50%);
   color: #f8ce65;
 }
 
+
 section.PORTFOLIO{
- background-color: #f3eee9;
-  padding: 5%;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  gap:60px;
-  max-width: 1200px;
-  margin: 5%;
-  margin-left: 30%;
+  background-color: #f3eee9;
+  position: absolute;
+  top: 15%;  
+  right: 3%;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 80px;
+  font-size: 40px;
+  line-height: 40px;
+  margin: 20px;
+  width: 1090px;
+  height: 2900px;
 }
 
-.project {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 5%;
+.SOD{
+  position: absolute;
+  top: 15%;
+  left: 5%;
 }
 
-.project .text {
-  flex: 1;
-}
-
-.project .image {
-  flex: 1;
-}
-
-.project img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.project.maharlika,
-.project.record,
-.project.sod {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+.SOD_ART{
+  background-image: url("images/SOD_ART.png");
+  position: absolute;
+  width: 477.5px;
+  height: 526.75px; 
+  background-size: cover;
+  top: 2%;
+  left: 55%;
 }
 
 mark.PORT{
@@ -560,20 +553,9 @@ mark.PORT{
  background-color: #f3eee9;
 }
 
-h2{
-  font-size: 80px;
-  margin: 0%;
-}
 
-p.h2{
-  font-size: 20px;
-  font-family: monospace;
-}
 
-.TITLE.style{
-  color:brown;
-  font-size: 120px;
-}
+
 
 /* Maharlika */
 
@@ -769,7 +751,7 @@ textarea {
   flex-direction: column;
   height: 100%;
   padding: 10px;
-  padding-top: 5%;
+  padding-top: 150px;
   padding-left: 25%;
 }
 
@@ -799,23 +781,6 @@ p.EXPTEXT{
 footer{
   margin-top: 20%;
 }
-
-h2{
-  font-size: 60px;
-  margin: 0;
-}
-
-p.h2{
-  font-size: 20px;
-  font-family: monospace;
-}
-
-.TITLE.style{
-  color:brown;
-  font-size: 90px;
-}
-
-
 }
 
 
@@ -1011,27 +976,6 @@ p.EXPTEXT{
   padding: 5%;
   font-size: 16px;
   text-align: right;
-}
-
-
-h2{
-  font-size: 30px;
-  margin: 0;
-}
-
-p.h2{
-  font-size: 16px;
-  font-family: monospace;
-}
-
-.TITLE.style{
-  font-size: 40px;
-}
-
-.project img {
-  width: 30vh;
-  height: auto;
-  object-fit: cover;
 }
 
 }
