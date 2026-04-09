@@ -257,7 +257,7 @@ img.logo:hover{
   justify-content: center;
   align-items: center;
   padding-top: 5%;
-  padding-left: 25%;
+  padding-left: 15%;
   flex-direction: column;
 }
 
@@ -282,7 +282,7 @@ img.logo:hover{
   background-image: url("images/ABOUT.png");
   border-radius: 0.5px;
   transform: rotate(5deg);
-  width: 60%;
+  width: 80%;
   min-height: 120px ;
   height: 60vh;
 }
@@ -574,7 +574,7 @@ h2{
 }
 
 p.h2{
-  font-size: clamp(16px, 1vw, 20px);
+  font-size: clamp(12px, 1vw, 16px);
   font-family: Helvetica;
 }
 
