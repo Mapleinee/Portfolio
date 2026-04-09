@@ -261,7 +261,7 @@ img.logo:hover{
   align-items: center;
   padding-top: 5%;
   padding-bottom: 5%;
-  padding-left: 13%;
+  padding-left: 30%;
 }
 
 
@@ -668,12 +668,16 @@ p.EXPTEXT{
   color: #d65442;
   font-size: 90px;
 }
-
-
+.ABOUT{
+  flex-direction: column;
+  padding-left: 25%;
 }
 
+.ME{
+  width: 80%;
+}
 
-
+}
 
 
 /*PHONE MEDIA STUFFS*/
@@ -802,6 +806,7 @@ p.EXPTEXT{
 .ABOUT{
   flex-direction: column;
   overflow-x: hidden !important;
+  padding-left: 10%;
 }
 
 .ME{
