@@ -3,7 +3,7 @@ body{
   background-color:#833737 ;
   font-family: "ByteBounce"; 
   margin: 0;
-  overflow-x: hidden;
+  overflow-x: hidden; 
  }
 
 
@@ -526,7 +526,9 @@ section.PORTFOLIO{
   max-width: 800px;
   margin: 5%;
   margin-left: 40%;
-  margin-top: 10%;
+  margin-top: 5%;
+  
+  overflow-x: hidden;
 }
 
 .project {
@@ -600,6 +602,7 @@ p.h2{
 
 html , body{
     overflow-x: hidden !important;
+    margin: 0;
 }
   
 
@@ -712,8 +715,12 @@ html , body{
   top: 35%;
   left: 13%;
   width: 8%;
+
 }
 
+.HIDE{
+ display: none;
+}
 /*letter*/
 .front,
 .back {
