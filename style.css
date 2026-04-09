@@ -256,10 +256,11 @@ img.logo:hover{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10%;
   padding-top: 5%;
   padding-left: 25%;
+  flex-direction: column;
 }
+
 
 .ME, .ABOUTME{
  display: flex;
@@ -269,26 +270,21 @@ img.logo:hover{
   background-position: center;
 }
 
-  .ME{
+.ME{
   background-image: url("images/ME.png") ;
   transform: rotate(-5deg);
   width: 100%;
-  height: 80vh;
+  height: 40vh;
+  min-height: 200px ;
 }
 
 .ABOUTME{
-  background-color: rgb(227, 221, 216);
+  background-image: url("images/ABOUT.png");
   border-radius: 0.5px;
   transform: rotate(5deg);
-  width: 60vh;
-  height: 100%;
-}
-
-p.ABOUTTEXT{
-  padding: 10%;
-  transform: rotate(0deg);
-  font-size: 1rem;
-  font-family:  monospace;
+  width: 60%;
+  min-height: 120px ;
+  height: 60vh;
 }
 
 .EXP{
@@ -303,24 +299,26 @@ p.ABOUTTEXT{
 p.EXPTEXT{
   padding: 5%;
   font-size: 18px;
-  font-family:  monospace;
+  font-family: Helvetica;
 }
 
 /* Contact Info */
 .contact-form{
-  width: 100%;
+  width: 80%;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
-  line-height: 20px;
+  margin: 0 auto;
+  font-size: clamp(20px, 2vw, 24px);
 }
 
 .btn {
-  padding: 10px 40px;
+  padding: 10px 20px;
   border-radius: 6px;
   font-family: "ByteBounce";
-  font-size: 30px;
+  font-size: clamp(16px, 2vw, 24px)
 }
 
 .btn:hover {
@@ -329,30 +327,26 @@ p.EXPTEXT{
 }
 
 textarea, input {
-  padding: 10px 10px;
+  padding: 10px;
   border-radius: 6px;
   outline: none;
-  width: 600px;
-  text-align: left;
-  border: #1d1817;
-  border-style:ridge;
-  font-family:monospace;
+  width: 80%;
+  margin: 0 auto;
+  border: 2px ridge #1d1817;
+  font-family: Helvetica;
 }
 
 input:hover , textarea:hover{
-border: #d65442;
-border-style: solid;
-color: #d65442;
+  border: #d65442;
+  border-style: solid;
+  color: #d65442;
 }
 
 textarea {
-  height: 600px;
+  min-height: 150px;
+  resize: vertical;
 }
 
-
-input, textarea {
-  font-size: 15px;
-}
 
 .CONTACTPAGE{
   display: flex;
@@ -371,15 +365,16 @@ input, textarea {
 
 .CONTACT {
   background-color: #f3eee9;
-  display: inline-block;
-  position: relative;
-  border-radius: 10px;
   display: flex;
-  padding: 80px;
-  overflow-x: hidden;
-  margin: 5%;
-  width: 800px;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  min-height: 60vh;
+  width: 60%;
+  max-width: 60%;
+  padding: 40px;
+  margin: 5%;
 }
 
 .APPS, .CONTACTME{
@@ -392,16 +387,18 @@ input, textarea {
 
   .CONTACTME{
   background-image: url("images/CONTACTME.png") ;
-  width: 50%;
-  height: 600px;
+  width: 100%;
+  height: 40vh;
+  max-height: 600px;
   position: relative;
   transform: rotate(-5deg);
 }
 
 .APPS{
   background-image: url("images/APPS.png");
-  width: 45%;
-  height: 600px;
+  width: 100%;
+  height: 40vh;
+  max-height: 200px;
   position: relative;
   transform: rotate(5deg);
 }
@@ -409,6 +406,9 @@ input, textarea {
 .PICS{
   width: 100%;
   display: flex;
+  margin-bottom: 0;
+  margin: 10%;
+
 }
 
 .hover:hover {
@@ -524,6 +524,7 @@ section.PORTFOLIO{
   max-width: 1200px;
   margin: 5%;
   margin-left: 30%;
+  margin-top: 10%;
 }
 
 .project {
@@ -547,6 +548,13 @@ section.PORTFOLIO{
   object-fit: cover;
 }
 
+
+.project video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .project.maharlika,
 .project.record,
 .project.sod {
@@ -561,81 +569,19 @@ mark.PORT{
 }
 
 h2{
-  font-size: 80px;
+  font-size: clamp(60px, 1vw, 80px);
   margin: 0%;
 }
 
 p.h2{
-  font-size: 20px;
-  font-family: monospace;
+  font-size: clamp(16px, 1vw, 20px);
+  font-family: Helvetica;
 }
 
 .TITLE.style{
-  color:brown;
-  font-size: 120px;
+  color: #d65442;
+  font-size: clamp(120px, 2vw, 120px);
 }
-
-/* Maharlika */
-
-.MAHARLIKA{
-  position: absolute;
-  top: 20%;
-  left: 6.5%;
-}
-
-.MAHARLIKA_IMG{
-  background-image: url("images/MAHARLIKA.png");
-  position: absolute;
-  width: 1025.6px;
-  height: 698px;
-  background-size: cover;
-  top: 23%;
-  left: 9%;
-}
-
-.MAHA{
-  position: absolute;
-  top: 35.25%;
-  left: 34.5%;
-}
-
-.MAHAR{
-  position: absolute;
-  top: 46%;
-  left: 39%;
-}
-
-
-
-
-/* Record Store */
-
-.RECORD{
-  position: absolute;
-  top: 50%;
-  left: 6.5%;
-}
-
-.RECORD_IMG{
-  background-image: url("images/RECORD.png");
-  position: absolute;
-  width: 1144px;
-  height: 639px;
-  background-size: cover;
-  top: 52%;
-  left: 5%;
-}
-
-
-
-
-
-/* Page Sizes */
-body.PORTFOLIO{
-  height: 3300px;
-}
-
-
 
 
 
@@ -654,41 +600,6 @@ html , body{
     overflow-x: hidden !important;
 }
   
-
-
-.ABOUT{
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 90vh;
-  padding: 10%;
-}
-
-.ME, .ABOUTME{
- display: flex;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.ME{
-  width: 90%;
-  height: 300px;
-}
-
-.ABOUTME{
-  width: 70%;
-  height: 700px;
-  margin-left: 15%;
-}
-
-p.ABOUTTEXT{
-  padding: 10%;
-  transform: rotate(0deg);
-  font-size: 18px;
-  font-family: 'Courier New', Courier, monospace;
-}
 
 /*PHONE NAVIGATION*/
 .NAV_TEXT{
@@ -744,51 +655,7 @@ p.ABOUTTEXT{
   flex-direction: column;
 }
 
-.CONTACTME{
-  width: 100%;
-  height: 500px;
-}
-
-.APPS{
-  width: 100%;
-  height: 400px;
-}
-
-textarea, input {
-  width: 400px;
-}
-
-textarea {
-  height: 300px;
-}
-
-.CONTACTPAGE{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
-  padding: 10px;
-  padding-top: 5%;
-  padding-left: 25%;
-}
-
-.CONTACTINFO{
-  padding-top: 40%;
-}
-
-.CONTACT {
-  width: 400px;
-}
-
 /*EXP*/
-.EXP{
-  width: 50vh;
-  height: 120vh;
-  padding: 5%;
-  margin-top: 30%;
-  margin-left: 20%;
-}
 
 p.EXPTEXT{
   padding: 5%;
@@ -796,22 +663,8 @@ p.EXPTEXT{
   text-align: right;
 }
 
-footer{
-  margin-top: 20%;
-}
-
-h2{
-  font-size: 60px;
-  margin: 0;
-}
-
-p.h2{
-  font-size: 20px;
-  font-family: monospace;
-}
-
 .TITLE.style{
-  color:brown;
+  color: #d65442;
   font-size: 90px;
 }
 
@@ -829,40 +682,6 @@ html , body{
     overflow-x: hidden !important;
 }
   
-.ABOUT{
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  height: 80vh;
-  padding: 50px;
-}
-
-.ME, .ABOUTME{
- display: flex;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.ME{
-  width: 90%;
-  height: 200px;
-}
-
-.ABOUTME{
-  width: 80%;
-  height: 580px;
-  margin-left: 15%;
-}
-
-p.ABOUTTEXT{
-  padding: 15%;
-  transform: rotate(0deg);
-  font-size: 13px;
-  font-family: monospace;
-}
-
 /*PHONE NAVIGATION*/
 .NAV_TEXT{
   left: 7%;
@@ -949,46 +768,7 @@ p.ABOUTTEXT{
   flex-direction: column;
 }
 
-.CONTACTME{
-  width: 100%;
-  height: 300px;
-}
 
-.APPS{
-  width: 100%;
-  height: 200px;
-}
-
-textarea, input {
-  width: 300px;
-}
-
-textarea {
-  height: 200px;
-}
-
-.CONTACTPAGE{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
-  padding: 10px;
-  padding-top: 150px;
-  padding-left: 10%;
-}
-
-.CONTACTINFO{
-  padding-top: 40%;
-}
-
-.CONTACT {
-  width: 250px;
-}
-
-footer{
-  margin-top: 40%;
-}
 .footer {
   font-size: 18px;
 }
@@ -1014,24 +794,17 @@ p.EXPTEXT{
 }
 
 
-h2{
-  font-size: 30px;
-  margin: 0;
-}
-
-p.h2{
-  font-size: 16px;
-  font-family: monospace;
-}
-
 .TITLE.style{
   font-size: 40px;
 }
 
-.project img {
-  width: 30vh;
-  height: auto;
-  object-fit: cover;
+.ME{
+  width: 100%;
+  height: 30vh;
 }
 
+.ABOUTME{
+  width: 100%;
+  height: 50vh;
+}
 }
